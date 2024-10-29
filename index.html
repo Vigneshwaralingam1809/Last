@@ -68,18 +68,41 @@
             text-align: center;
             padding: 10px 0;
         }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .skills div {
+            width: 23%; /* Adjust width to fit four in a row */
+            text-align: center;
+            position: relative;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        .skills div:hover {
+            transform: scale(1.1);
+        }
         .skills img {
             width: 50px;
-            margin: 10px;
+            margin: 10px 0;
         }
-        .projects a {
+        .skill-detail {
+            display: none;
+            position: absolute;
+            background: #fff;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+            top: 100%; /* Position below the skill icon */
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            width: 200px; /* Set width for skill details */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .skills div:hover .skill-detail {
             display: block;
-            margin: 5px 0;
-            color: #007bff;
-            text-decoration: none;
-        }
-        .projects a:hover {
-            text-decoration: underline;
         }
 
         /* Media Queries */
@@ -93,8 +116,8 @@
                 float: none;
                 width: 100%;
             }
-            .skills img {
-                width: 40px;
+            .skills div {
+                width: 48%; /* Adjust for mobile */
             }
             .btn {
                 display: block;
@@ -178,15 +201,62 @@
     <div class="container">
         <h2>Skills</h2>
         <div class="skills">
-            <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
-            <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML">
-            <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS">
-            <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
-            <img src="https://img.icons8.com/color/48/000000/microsoft-office.png" alt="Microsoft Office">
-            <img src="https://img.icons8.com/color/48/000000/canva.png" alt="Canva">
-            <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub">
-            <img src="https://img.icons8.com/color/48/000000/visual-studio-code-1.png" alt="VS Code">
-            <img src="https://img.icons8.com/color/48/000000/wordpress.png" alt="WordPress">
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/python.png" alt="Python">
+                <h4>Python</h4>
+                <div class="skill-detail">
+                    As a beginner in Python, I can handle basic programming concepts and data structures. I have developed simple scripts and applications to automate tasks and process data.
+                </div>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML">
+                <h4>HTML</h4>
+                <div class="skill-detail">
+                    Proficient in HTML, I can create structured web pages, utilize semantic elements, and ensure accessibility and SEO best practices in my coding.
+                </div>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/css3.png" alt="CSS">
+                <h4>CSS</h4>
+                <div class="skill-detail">
+                    As a beginner in CSS, I can handle styling elements, such as changing colors, fonts, and sizes. I can create layouts using Flexbox and Grid, manage spacing with margins and padding, and ensure responsiveness with media queries. I can also add transitions for smooth effects and style text effectively.
+                </div>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript">
+                <h4>JavaScript</h4>
+                <div class="skill-detail">
+                    I am familiar with JavaScript and can implement interactive features on web pages. I understand DOM manipulation and can create simple scripts to enhance user experience.
+                </div>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/microsoft-office.png" alt="Microsoft Office">
+                <h4>Microsoft Office</h4>
+                <div class="skill-detail">
+                    Proficient in Microsoft Office tools including Word, Excel, and PowerPoint, I can create professional documents, analyze data, and deliver impactful presentations.
+                </div>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/canva.png" alt="Canva">
+                <h4>Canva</h4>
+                <div class="skill-detail">
+                    Familiar with Canva, I can create visually appealing graphics and presentations with ease. I leverage its templates and tools to produce professional designs.
+                </div>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/github.png" alt="GitHub">
+                <h4>GitHub</h4>
+                <div class="skill-detail">
+                    I am learning Git and GitHub for version control. I understand the basic commands to manage repositories and collaborate on projects effectively.
+                </div>
+            </div>
+            <div>
+                <img src="https://img.icons8.com/color/48/000000/visual-studio-code-1.png" alt="VS Code">
+                <h4>VS Code</h4>
+                <div class="skill-detail">
+                    I use Visual Studio Code as my primary code editor, utilizing its features like debugging, extensions, and version control integration to enhance my productivity.
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -194,43 +264,45 @@
 <section id="projects">
     <div class="container">
         <h2>Projects</h2>
-        <div class="projects">
-            <a href="your_keylogger_repo_link" target="_blank">Keylogger</a>
-            <a href="your_bigdata_project_repo_link" target="_blank">Enhancing the Teaching Skills Using Big Data Analytics</a>
-        </div>
+        <p>Keylogger Project: A tool designed to log keystrokes on a target machine.</p>
+        <p>QR Code Generator: A web application to create QR codes for URLs and text.</p>
     </div>
 </section>
 
 <section id="experience">
     <div class="container">
         <h2>Experience</h2>
-        <p>Workshop on Matplotlib Data Visualization - Mastered Matplotlib for dynamic data visualizations.</p>
-        <p>Completed a simulation focused on advising a hypothetical social media client as a Data Analyst at Accenture.</p>
+        <p>Aforeserve Company: Hardware testing company (2 months).</p>
+        <p>Participated in a virtual internship, focusing on web development and project management.</p>
     </div>
 </section>
 
 <section id="certificates">
     <div class="container">
         <h2>Certificates</h2>
-        <p>Python Beginner Course | Edu Prep | Issued on 23 March 2024 | No Expiry Date</p>
-        <p>QR Code Generator | Python | <a href="link_to_certificate" target="_blank">View Certificate</a></p>
+        <p>Python Certificate</p>
+        <p>Internship Certificate</p>
     </div>
 </section>
 
 <section id="achievements">
     <div class="container">
         <h2>Achievements</h2>
-        <p>Event Organizer for Logo Design Competitions - Successfully organized and managed logo design competitions.</p>
-        <p>Outstanding Volunteer Award - 34th Tamil Nadu U13 Open & Girls Championship 2022.</p>
-        <p>National Means Cum Merit Scholarship - Awarded for exceptional academic performance and merit.</p>
+        <p>Presentation on Big Data</p>
     </div>
 </section>
 
 <section id="contact">
     <div class="container">
         <h2>Contact</h2>
-        <p>Phone: 9047182570</p>
-        <p>Email: <a href="mailto:m.vigneshwaralingam@gmail.com">m.vigneshwaralingam@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/vigneshwaralingam1809" target="_blank">vigneshwaralingam1809</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/v
-                         
+        <p>Email: your_email@example.com</p>
+        <p>LinkedIn: <a href="your_linkedin_profile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 M VIGNESHWARALINGAM. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
