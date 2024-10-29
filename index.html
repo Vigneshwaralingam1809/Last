@@ -38,6 +38,7 @@
             float: left;
             width: 40%;
             margin-right: 20px;
+            border-radius: 50%;
         }
         .content {
             float: right;
@@ -79,6 +80,43 @@
         }
         .projects a:hover {
             text-decoration: underline;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .photo {
+                float: none;
+                width: 100%;
+                margin: 0 0 20px 0;
+            }
+            .content {
+                float: none;
+                width: 100%;
+            }
+            .skills img {
+                width: 40px;
+            }
+            .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .photo {
+                float: left;
+                width: 40%;
+                margin-right: 20px;
+            }
+            .content {
+                float: right;
+                width: 55%;
+            }
+            .btn {
+                display: inline-block;
+                width: auto;
+            }
         }
     </style>
 </head>
@@ -194,39 +232,5 @@
         <p>Phone: 9047182570</p>
         <p>Email: <a href="mailto:m.vigneshwaralingam@gmail.com">m.vigneshwaralingam@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/vigneshwaralingam1809" target="_blank">vigneshwaralingam1809</a></p>
-        <p>LinkedIn: <a href="https://linkedin.com/in/vigneshwaralingam-m" target="_blank">vigneshwaralingam-m</a></p>
-        <p>CodeChef: <a href="https://www.codechef.com/users/vignesh1809m" target="_blank">vignesh1809m</a></p>
-    </div>
-</section>
-
-<footer>
-    <p>&copy; 2024 M VIGNESHWARALINGAM. All rights reserved.</p>
-</footer>
-
-<script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('nav a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            targetElement.scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Button click effects
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(button => {
-        button.addEventListener('click', function () {
-            this.style.backgroundColor = '#155724'; // Darken button on click
-            setTimeout(() => {
-                this.style.backgroundColor = '#28a745'; // Reset after 300ms
-            }, 300);
-        });
-    });
-</script>
-
-</body>
-</html>
+        <p>LinkedIn: <a href="https://linkedin.com/in/v
+                         
